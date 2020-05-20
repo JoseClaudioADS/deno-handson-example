@@ -10,7 +10,7 @@ clientsRouter.get("/", async (req: Request, res: Response) => {
 clientsRouter.post("/", async (req: Request, res: Response) => {
   const { value } = await req.body();
   await Client.create([value]);
-  res.status(201);
+  res.status(201).send("Ok");
 });
 
 export default clientsRouter;
